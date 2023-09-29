@@ -37,7 +37,7 @@ ul.task-list li input[type="checkbox"] {
 
 <script src="ROCKi_report_files/libs/htmlwidgets-1.6.2/htmlwidgets.js"></script>
 <link href="ROCKi_report_files/libs/datatables-css-0.0.0/datatables-crosstalk.css" rel="stylesheet">
-<script src="ROCKi_report_files/libs/datatables-binding-0.28/datatables.js"></script>
+<script src="ROCKi_report_files/libs/datatables-binding-0.29/datatables.js"></script>
 <script src="ROCKi_report_files/libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <link href="ROCKi_report_files/libs/dt-core-1.13.4/css/jquery.dataTables.min.css" rel="stylesheet">
 <link href="ROCKi_report_files/libs/dt-core-1.13.4/css/jquery.dataTables.extra.css" rel="stylesheet">
@@ -79,8 +79,13 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#ko-mimicking" id="toc-ko-mimicking" class="nav-link" data-scroll-target="#ko-mimicking"><span class="header-section-number">7.1</span> KO mimicking</a></li>
   <li><a href="#ko-rescue" id="toc-ko-rescue" class="nav-link" data-scroll-target="#ko-rescue"><span class="header-section-number">7.2</span> KO rescue</a></li>
   <li><a href="#ltr" id="toc-ltr" class="nav-link" data-scroll-target="#ltr"><span class="header-section-number">7.3</span> LTR</a></li>
+  <li><a href="#ko-overreaction" id="toc-ko-overreaction" class="nav-link" data-scroll-target="#ko-overreaction"><span class="header-section-number">7.4</span> KO overreaction</a></li>
+  <li><a href="#ko-unique-response" id="toc-ko-unique-response" class="nav-link" data-scroll-target="#ko-unique-response"><span class="header-section-number">7.5</span> KO Unique-Response</a></li>
   </ul></li>
-  <li><a href="#rescue" id="toc-rescue" class="nav-link" data-scroll-target="#rescue"><span class="header-section-number">8</span> Rescue</a></li>
+  <li><a href="#rescue" id="toc-rescue" class="nav-link" data-scroll-target="#rescue"><span class="header-section-number">8</span> Rescue</a>
+  <ul class="collapse">
+  <li><a href="#genes-with-needed-rescue" id="toc-genes-with-needed-rescue" class="nav-link" data-scroll-target="#genes-with-needed-rescue"><span class="header-section-number">8.1</span> Genes with needed Rescue</a></li>
+  </ul></li>
   <li><a href="#model" id="toc-model" class="nav-link" data-scroll-target="#model"><span class="header-section-number">9</span> Model</a></li>
   <li><a href="#ko-animals" id="toc-ko-animals" class="nav-link" data-scroll-target="#ko-animals"><span class="header-section-number">10</span> KO animals</a>
   <ul class="collapse">
@@ -448,8 +453,9 @@ Important
 </div>
 </div>
 <p>Two of them have a pattern of KO rescue (Gm19680 and Ntng2). Fam205a2, shown previously a pattern of disregulation caused by the treatment. The others show a pattern of KO overreaction to ROCKi</p>
-<section id="ko-overreaction" class="level4" data-number="7.3.1">
-<h4 data-number="7.3.1" class="anchored" data-anchor-id="ko-overreaction"><span class="header-section-number">7.3.1</span> KO overreaction</h4>
+</section>
+<section id="ko-overreaction" class="level3" data-number="7.4">
+<h3 data-number="7.4" class="anchored" data-anchor-id="ko-overreaction"><span class="header-section-number">7.4</span> KO overreaction</h3>
 <p>Similar as with KO mimicking and KO rescue for identifying genes with KO pattern overreaction to ROCKi I used the three comparisons where KO treated is involved. (The comparison WT ROCKi vs KO ROCKi has the double weight as the others comparisons). Following this analysis I identify 225 genes with the pattern of overreaction</p>
 <div class="cell" data-hash="ROCKi_report_cache/html/unnamed-chunk-39_5ca47a869cbffa2f31f2a64ecb55b5dd">
 <div class="cell-output-display">
@@ -483,8 +489,8 @@ Important
 </div>
 </div>
 </section>
-<section id="ko-unique-response" class="level4" data-number="7.3.2">
-<h4 data-number="7.3.2" class="anchored" data-anchor-id="ko-unique-response"><span class="header-section-number">7.3.2</span> KO Unique-Response</h4>
+<section id="ko-unique-response" class="level3" data-number="7.5">
+<h3 data-number="7.5" class="anchored" data-anchor-id="ko-unique-response"><span class="header-section-number">7.5</span> KO Unique-Response</h3>
 <p>With this comparison I want to highlight genes that reacted to ROCKi in WT but not in KO.</p>
 <div class="cell" data-hash="ROCKi_report_cache/html/unnamed-chunk-46_159dfa5b82dac33906b68de553dad5c5">
 <div class="cell-output-display">
@@ -493,16 +499,20 @@ Important
 </div>
 </section>
 </section>
-</section>
 <section id="rescue" class="level2" data-number="8">
 <h2 data-number="8" class="anchored" data-anchor-id="rescue"><span class="header-section-number">8</span> Rescue</h2>
+<div class="cell" data-hash="ROCKi_report_cache/html/unnamed-chunk-48_4d2c84d35608404876749fb5fb8a15b2">
+<div class="cell-output-display">
+<p><img src="ROCKi_report_files/figure-html/unnamed-chunk-48-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
 <p><span class="math display">\[
 Rescue Ratio = \frac{log2FC(ROCKi_{KO})}{-log2FC(KO_{Veh})}
 \]</span></p>
 <p>Where ROCKi_KO stands for the comparison of ROCKi vs Veh in KO genotype and KO_Veh is KO vs WT treated with Veh. A value around 1 (dashed line) represent complete rescue, values greater than 1 mean that not only WT Veh levels are restore but increased, values between 0 and 1 mean partial rescue, 0 means ROCKi did not altred KO expression, lastly negative values mean that with ROCKi the altered KO expression is increased with the same direction.</p>
-<div class="cell" data-hash="ROCKi_report_cache/html/unnamed-chunk-47_cbf8c3558469240e555b1c3907bd4dd2">
+<div class="cell" data-hash="ROCKi_report_cache/html/unnamed-chunk-49_1c46fcd47c9593e50f39bf2a269bd92b">
 <div class="cell-output-display">
-<p><img src="ROCKi_report_files/figure-html/unnamed-chunk-47-1.png" class="img-fluid" width="768"></p>
+<p><img src="ROCKi_report_files/figure-html/unnamed-chunk-49-1.png" class="img-fluid" width="768"></p>
 </div>
 </div>
 <p>I talked with Nico about this and he pointed me to his paper where he and Ivano developed a Rescue Index which has this formula:</p>
@@ -514,22 +524,22 @@ RescueIndex=10^{-\frac{(Rescue - WT)}{(KO - WT)}}
 RescueIndex=2^{-\frac{(ROCKi_{KO} - Veh_{WT})}{(Veh_{KO} - Veh_{WT})}}
 \]</span></p>
 <p>It is important to recall that log2(x)-log2(y)=log2(x/y), therefore I will use the log2-foldchanges calculated by DESeq2.</p>
-<div class="cell" data-hash="ROCKi_report_cache/html/unnamed-chunk-48_a16e9eea5f8b1b6f4fc11baa4bebbf7a">
+<div class="cell" data-hash="ROCKi_report_cache/html/unnamed-chunk-50_7bace67d8d2d15cd3f96b4000b04ffb7">
 <div class="cell-output-display">
-<p><img src="ROCKi_report_files/figure-html/unnamed-chunk-48-1.png" class="img-fluid" width="672"></p>
+<p><img src="ROCKi_report_files/figure-html/unnamed-chunk-50-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
 <p>Here a value of 0.5 represent that there is no rescue and that the values from KO Veh and KO ROCKi change similarly in comparison to WT Veh. Values from 0-0.5 represent that the gene expression of KO ROCKi changed more than KO Veh (in the same direction). 1 means perfect rescue, KO ROCKi is similar to WT Veh, and values above 1 means over-rescue.</p>
 <p>This is the relationship between the two values:</p>
-<div class="cell" data-hash="ROCKi_report_cache/html/unnamed-chunk-49_f6ac515e91606a478b3d8cfebdd3c051">
+<div class="cell" data-hash="ROCKi_report_cache/html/unnamed-chunk-51_00992193fb766cf8552c1dc2628f1ed7">
 <div class="cell-output-display">
-<p><img src="ROCKi_report_files/figure-html/unnamed-chunk-49-1.png" class="img-fluid" width="672"></p>
+<p><img src="ROCKi_report_files/figure-html/unnamed-chunk-51-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
 <p>As it is clearly seen there is a relationship, where the data is only differentially transformed (maths not included, but analyzed). Here are the different groups plotted, and they were distributed as expected.</p>
-<div class="cell" data-hash="ROCKi_report_cache/html/unnamed-chunk-50_ee9692376103ec9e69be973a94a375f4">
+<div class="cell" data-hash="ROCKi_report_cache/html/unnamed-chunk-52_9248f10da3a98de80d122d6e4a034d45">
 <div class="cell-output-display">
-<p><img src="ROCKi_report_files/figure-html/unnamed-chunk-50-1.png" class="img-fluid" width="672"></p>
+<p><img src="ROCKi_report_files/figure-html/unnamed-chunk-52-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
 <p>While writing this part just realized that I was not considering the actual effect of ROCKi in the formula so I came with a new one:</p>
@@ -537,52 +547,91 @@ RescueIndex=2^{-\frac{(ROCKi_{KO} - Veh_{WT})}{(Veh_{KO} - Veh_{WT})}}
 Real\ Rescue\ Ratio  = \frac{log2FC(ROCKi_{KO})-log2FC(ROCKi_{WT})}{-log2FC(KO_{Veh})}
 \]</span></p>
 <p>The new term represent the difference between ROCKi and Veh in WT, the interpretation of this ratio is the same as the one I described above.</p>
-<div class="cell" data-hash="ROCKi_report_cache/html/unnamed-chunk-51_8ef7e525eb1a301b22011d7002bc35b2">
-<div class="cell-output-display">
-<p><img src="ROCKi_report_files/figure-html/unnamed-chunk-51-1.png" class="img-fluid" width="672"></p>
-</div>
-</div>
-<p>And the relation with Nico’s Rescue Index looks like this:</p>
-<div class="cell" data-hash="ROCKi_report_cache/html/unnamed-chunk-52_a993f87bfab8550cd559e1cf7653d09b">
-<div class="cell-output-display">
-<p><img src="ROCKi_report_files/figure-html/unnamed-chunk-52-1.png" class="img-fluid" width="672"></p>
-</div>
-</div>
-<p>Patterns are maintained because as already discussed there are not that many and neither big expression changes between ROCKi and Veh in WT.</p>
-<p>It is worth to mention that based on the density plot it is expected that most of the other genes show values of real rescue ratio similar as rescue genes:</p>
-<div class="cell" data-hash="ROCKi_report_cache/html/unnamed-chunk-53_f6731d1332867f81edb29a0266ac8f29">
-<div class="cell-output-display">
-<p><img src="ROCKi_report_files/figure-html/unnamed-chunk-53-1.png" class="img-fluid" width="672"></p>
-</div>
-</div>
-<p>Nevertheless, rescue pattern and no changes in gene expression would lead to similar Real Rescue Ratio. Here is an example, where both genes have a <strong>real rescue rate</strong> ~ 1.</p>
-<div class="cell" data-hash="ROCKi_report_cache/html/unnamed-chunk-54_3aa9b7340faa9db16e8b56cd258349cd">
+<div class="cell" data-hash="ROCKi_report_cache/html/unnamed-chunk-54_541b6ee7f7f4227c852cc98d76ff7000">
 <div class="cell-output-display">
 <p><img src="ROCKi_report_files/figure-html/unnamed-chunk-54-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
-<p>Then, in order to make sense out of the Real Rescue Ratio I filtered for genes which expression needs to be rescued (in either direction) based on the log2 foldchange between KO and WT in Veh (abs(log2FC)&gt;0.25).</p>
-<div class="cell" data-hash="ROCKi_report_cache/html/unnamed-chunk-55_65421c625f5e18f63308cb5637aba3f7">
+<div class="cell" data-hash="ROCKi_report_cache/html/unnamed-chunk-55_5a2ffe40a3e3e59c74b7bb4ec0d5b936">
 <div class="cell-output-display">
 <p><img src="ROCKi_report_files/figure-html/unnamed-chunk-55-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
-<p>With the real rescue ratio we could then visualize the results from <a href="#sec-BP">Section&nbsp;7.2.1</a>. These are the genes with significant rescue pattern from the top 10 significant group-terms from the biological processes(sorted by p-value ), the term with most genes with KO rescue pattern per group was selected as representative.</p>
-<div class="cell" data-hash="ROCKi_report_cache/html/unnamed-chunk-56_d28bf48995ec25c0a9b1612ca643f3e2">
+<p>And the relation with Nico’s Rescue Index looks like this:</p>
+<div class="cell" data-hash="ROCKi_report_cache/html/unnamed-chunk-56_090a4d9fdfcc0c6d76906baf17bf13fe">
 <div class="cell-output-display">
-<p><img src="ROCKi_report_files/figure-html/unnamed-chunk-56-1.png" class="img-fluid" width="1440"></p>
+<p><img src="ROCKi_report_files/figure-html/unnamed-chunk-56-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<p>Patterns are maintained because as already discussed there are not that many and neither big expression changes between ROCKi and Veh in WT.</p>
+<p>It is worth to mention that based on the density plot it is expected that most of the other genes show values of real rescue ratio similar as rescue genes:</p>
+<div class="cell" data-hash="ROCKi_report_cache/html/unnamed-chunk-57_993ab885fa3c5615f89ac749beab2c57">
+<div class="cell-output-display">
+<p><img src="ROCKi_report_files/figure-html/unnamed-chunk-57-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<p>Nevertheless, rescue pattern and no changes in gene expression would lead to similar Real Rescue Ratio. Here is an example, where both genes have a <strong>real rescue rate</strong> ~ 1.</p>
+<div class="cell" data-hash="ROCKi_report_cache/html/unnamed-chunk-58_ee6b705794a11e5ee4ecd7a1b5e818f6">
+<div class="cell-output-display">
+<p><img src="ROCKi_report_files/figure-html/unnamed-chunk-58-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<section id="genes-with-needed-rescue" class="level3" data-number="8.1">
+<h3 data-number="8.1" class="anchored" data-anchor-id="genes-with-needed-rescue"><span class="header-section-number">8.1</span> Genes with needed Rescue</h3>
+<p>Then, in order to make sense out of the Real Rescue Ratio I filtered for genes which expression needs to be rescued (in either direction) based on the log2 foldchange between KO and WT in Veh</p>
+<div class="cell" data-hash="ROCKi_report_cache/html/unnamed-chunk-59_2868d3b1d8f6b1b55f52bf7db324eb1f">
+<div class="cell-output-display">
+<p><img src="ROCKi_report_files/figure-html/unnamed-chunk-59-1.png" class="img-fluid" width="1248"></p>
+</div>
+</div>
+<p>This plot show the distribution of the real rescue ratio from the genes with a greater abs(log2FC) than 0.25 and 1.5, divided by categories.</p>
+<div class="cell" data-hash="ROCKi_report_cache/html/unnamed-chunk-60_09e8be262c2edae0d417bda22569c587">
+<div class="cell-output-display">
+<p><img src="ROCKi_report_files/figure-html/unnamed-chunk-60-1.png" class="img-fluid" width="1248"></p>
+</div>
+</div>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Important
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>It is important to mention that disregarding thresholds most of the genes from Others category have similar distribution of Real Rescue Ratios as the KO rescues. This implies that the ROCKi is rescuing the expression of most of the genes which expression is changed in KO.</p>
+</div>
+</div>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Important
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>I choose to mantain the filter of 0.25, genes with less abs(log2FC) will not be considered in the following part.</p>
+</div>
+</div>
+<p>With the real rescue ratio we could then visualize the results from <a href="#sec-BP">Section&nbsp;7.2.1</a>. These are the genes with significant rescue pattern from the top 10 significant group-terms from the biological processes(sorted by p-value ), the term with most genes with KO rescue pattern per group was selected as representative.</p>
+<div class="cell" data-hash="ROCKi_report_cache/html/unnamed-chunk-61_36ff6bba4d2423112c06975564b3b116">
+<div class="cell-output-display">
+<p><img src="ROCKi_report_files/figure-html/unnamed-chunk-61-1.png" class="img-fluid" width="1440"></p>
 </div>
 </div>
 <p>Here is a similar plot for the results from MF.</p>
-<div class="cell" data-hash="ROCKi_report_cache/html/unnamed-chunk-57_e0906bcab27fbfa9579dc4a9881cf340">
+<div class="cell" data-hash="ROCKi_report_cache/html/unnamed-chunk-62_454da48e943f5469b6483f1ab61d924f">
 <div class="cell-output-display">
-<p><img src="ROCKi_report_files/figure-html/unnamed-chunk-57-1.png" class="img-fluid" width="1248"></p>
+<p><img src="ROCKi_report_files/figure-html/unnamed-chunk-62-1.png" class="img-fluid" width="1248"></p>
 </div>
 </div>
 <p>We can the plot all genes from a specific GO term and since there is a particular inetrest in the term “actomyosin structure organization” here it is (*yellow color represent genes that were excluded because they do not showed abs(log2FC) &gt; 0. 25 in KO vs WT Veh):</p>
-<div class="cell" data-hash="ROCKi_report_cache/html/unnamed-chunk-58_2936c0c8169bdb1d271b49b005733ec0">
+<div class="cell" data-hash="ROCKi_report_cache/html/unnamed-chunk-63_d61053db2b56ebc3e2daa4279574b1a3">
 <div class="cell-output-display">
-<p><img src="ROCKi_report_files/figure-html/unnamed-chunk-58-1.png" class="img-fluid" width="960"></p>
+<p><img src="ROCKi_report_files/figure-html/unnamed-chunk-63-1.png" class="img-fluid" width="960"></p>
 </div>
 </div>
 <p>We can additionally check KEGG pathways. Here are 3 examples, one is the Hippo signaling pathway and the others two where ROCK is involved:</p>
@@ -602,11 +651,12 @@ Caution
 <p>Rho is colored yellow because KEGG assumes in this pathways only Rhoa is acting and the expression of Rhoa does not need to be rescued.</p>
 </div>
 </div>
-<div class="cell" data-hash="ROCKi_report_cache/html/unnamed-chunk-60_a7805e5e492b1339bfe25054f67606a9">
+<div class="cell" data-hash="ROCKi_report_cache/html/unnamed-chunk-65_32fe4e4a78e1161ddb98e294f9913c49">
 <div class="cell-output-display">
-<p><img src="ROCKi_report_files/figure-html/unnamed-chunk-60-1.png" class="img-fluid" width="384"></p>
+<p><img src="ROCKi_report_files/figure-html/unnamed-chunk-65-1.png" class="img-fluid" width="384"></p>
 </div>
 </div>
+</section>
 </section>
 <section id="model" class="level2" data-number="9">
 <h2 data-number="9" class="anchored" data-anchor-id="model"><span class="header-section-number">9</span> Model</h2>
@@ -621,48 +671,48 @@ Caution
 <section id="stats" class="level4" data-number="10.1.1">
 <h4 data-number="10.1.1" class="anchored" data-anchor-id="stats"><span class="header-section-number">10.1.1</span> Stats</h4>
 <p>The first approach was to perform a GSEA on the “stats” from which p-value is calculated. <del>Positives values would represent lower p-values</del>. Extreme values represent lower p-values and the sign of of it, if gene is more expressed in KO (positive) or WT (negative). I tested here 6 lists, rescue genes, ROCKi insensitive KO genes altered and the merge of these two, for up and down patterns.</p>
-<div class="cell" data-hash="ROCKi_report_cache/html/unnamed-chunk-62_6867d68b12507bb1af8c35a456820bdd">
+<div class="cell" data-hash="ROCKi_report_cache/html/unnamed-chunk-67_bef0750cd0155f890ccaafd8c25ae95c">
 <div class="cell-output-display">
 
-<div class="datatables html-widget html-fill-item-overflow-hidden html-fill-item" id="htmlwidget-0ea6a8cd5bc55e63b214" style="width:100%;height:auto;"></div>
-<script type="application/json" data-for="htmlwidget-0ea6a8cd5bc55e63b214">{"x":{"filter":"none","vertical":false,"extensions":["Buttons"],"data":[["Both_down","RescueList_down","KOList_neg","Both_up","RescueList_up","KOList_up"],[398,321,77,71,27,44],[0.2912405661609753,0.2914040754446544,0.3254642081580394,-0.3076579036813175,-0.3513546026837511,-0.292612249949122],[1.54726331565619,1.514345211818108,1.37794512244074,-1.252309869673871,-1.160614384530651,-1.08226805734167],[3.531187258282635e-05,0.0001138472766410673,0.0378029797642873,0.1152382678021381,0.2485645489905538,0.3232830820770519],[0.0002118712354969581,0.0003415418299232018,0.0756059595285746,0.1728574017032071,0.2982774587886646,0.3232830820770519]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>setSize<\/th>\n      <th>enrichmentScore<\/th>\n      <th>NES<\/th>\n      <th>pvalue<\/th>\n      <th>p.adjust<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"paging":true,"scrollX":true,"searching":true,"ordering":true,"dom":"Bfrtip","buttons":["csv","excel"],"pageLength":10,"lengthMenu":[3,5,10],"columnDefs":[{"className":"dt-right","targets":[1,2,3,4,5]},{"orderable":false,"targets":0}],"order":[],"autoWidth":false,"orderClasses":false},"selection":{"mode":"multiple","selected":null,"target":"row","selectable":null}},"evals":[],"jsHooks":[]}</script>
+<div class="datatables html-widget html-fill-item-overflow-hidden html-fill-item" id="htmlwidget-02a6b63a612b66c6a724" style="width:100%;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-02a6b63a612b66c6a724">{"x":{"filter":"none","vertical":false,"extensions":["Buttons"],"data":[["Both_down","RescueList_down","KOList_neg","Both_up","RescueList_up","KOList_up"],[398,321,77,71,27,44],[0.2912405661609753,0.2914040754446544,0.3254642081580394,-0.3076579036813175,-0.3513546026837511,-0.292612249949122],[1.54726331565619,1.514345211818108,1.37794512244074,-1.252309869673871,-1.160614384530651,-1.08226805734167],[3.531187258282635e-05,0.0001138472766410673,0.0378029797642873,0.1152382678021381,0.2485645489905538,0.3232830820770519],[0.0002118712354969581,0.0003415418299232018,0.0756059595285746,0.1728574017032071,0.2982774587886646,0.3232830820770519]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>setSize<\/th>\n      <th>enrichmentScore<\/th>\n      <th>NES<\/th>\n      <th>pvalue<\/th>\n      <th>p.adjust<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"paging":true,"scrollX":true,"searching":true,"ordering":true,"dom":"Bfrtip","buttons":["csv","excel"],"pageLength":10,"lengthMenu":[3,5,10],"columnDefs":[{"className":"dt-right","targets":[1,2,3,4,5]},{"orderable":false,"targets":0}],"order":[],"autoWidth":false,"orderClasses":false},"selection":{"mode":"multiple","selected":null,"target":"row","selectable":null}},"evals":[],"jsHooks":[]}</script>
 </div>
 </div>
-<div class="cell" data-hash="ROCKi_report_cache/html/unnamed-chunk-63_aa3287a9af9a91db54d61244e99f4ee4">
+<div class="cell" data-hash="ROCKi_report_cache/html/unnamed-chunk-68_d0ba47b7c71737f3f2e27d641e2b44bb">
 <div class="cell-output-display">
-<p><img src="ROCKi_report_files/figure-html/unnamed-chunk-63-1.png" class="img-fluid" width="672"></p>
+<p><img src="ROCKi_report_files/figure-html/unnamed-chunk-68-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
 </section>
 <section id="fold-changes" class="level4" data-number="10.1.2">
 <h4 data-number="10.1.2" class="anchored" data-anchor-id="fold-changes"><span class="header-section-number">10.1.2</span> Fold Changes</h4>
 <p>Then I started testing independently up/down lists but here KO mice data used were log2 fold change between KO and WT. Positive values represent higher in KO than in WT.</p>
-<div class="cell" data-hash="ROCKi_report_cache/html/unnamed-chunk-64_f22d0c8d74555365b51d96ef54bac8da">
+<div class="cell" data-hash="ROCKi_report_cache/html/unnamed-chunk-69_fdbd5827c4d5dc895081d6fa010c89b0">
 <div class="cell-output-display">
 
-<div class="datatables html-widget html-fill-item-overflow-hidden html-fill-item" id="htmlwidget-cafbdc084f9ea43df8fd" style="width:100%;height:auto;"></div>
-<script type="application/json" data-for="htmlwidget-cafbdc084f9ea43df8fd">{"x":{"filter":"none","vertical":false,"extensions":["Buttons"],"data":[["Both_down","Both_up","KOList_neg","RescueList_down","KOList_up","RescueList_up"],[398,71,77,321,44,27],[0.3695715387341569,-0.4867823661278221,0.4599618936643967,0.3535115689366977,-0.4695950608799846,-0.51899149534734],[1.40439753630042,-1.59559478511633,1.443869469290573,1.319400189622365,-1.424733393549032,-1.431165915319597],[0.0044,0.03368940016433854,0.03606557377049181,0.02423661508968917,0.07676402171103644,0.09225456339417859],[0.0264,0.05409836065573771,0.05409836065573771,0.05409836065573771,0.09211682605324373,0.09225456339417859]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>setSize<\/th>\n      <th>enrichmentScore<\/th>\n      <th>NES<\/th>\n      <th>pvalue<\/th>\n      <th>p.adjust<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"paging":true,"scrollX":true,"searching":true,"ordering":true,"dom":"Bfrtip","buttons":["csv","excel"],"pageLength":5,"lengthMenu":[3,5,10],"columnDefs":[{"className":"dt-right","targets":[1,2,3,4,5]},{"orderable":false,"targets":0}],"order":[],"autoWidth":false,"orderClasses":false},"selection":{"mode":"multiple","selected":null,"target":"row","selectable":null}},"evals":[],"jsHooks":[]}</script>
+<div class="datatables html-widget html-fill-item-overflow-hidden html-fill-item" id="htmlwidget-cc79d724f648e525ea9b" style="width:100%;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-cc79d724f648e525ea9b">{"x":{"filter":"none","vertical":false,"extensions":["Buttons"],"data":[["Both_down","Both_up","KOList_neg","RescueList_down","KOList_up","RescueList_up"],[398,71,77,321,44,27],[0.3695715387341569,-0.4867823661278221,0.4599618936643967,0.3535115689366977,-0.4695950608799846,-0.51899149534734],[1.40439753630042,-1.59559478511633,1.443869469290573,1.319400189622365,-1.424733393549032,-1.431165915319597],[0.0044,0.03368940016433854,0.03606557377049181,0.02423661508968917,0.07676402171103644,0.09225456339417859],[0.0264,0.05409836065573771,0.05409836065573771,0.05409836065573771,0.09211682605324373,0.09225456339417859]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>setSize<\/th>\n      <th>enrichmentScore<\/th>\n      <th>NES<\/th>\n      <th>pvalue<\/th>\n      <th>p.adjust<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"paging":true,"scrollX":true,"searching":true,"ordering":true,"dom":"Bfrtip","buttons":["csv","excel"],"pageLength":5,"lengthMenu":[3,5,10],"columnDefs":[{"className":"dt-right","targets":[1,2,3,4,5]},{"orderable":false,"targets":0}],"order":[],"autoWidth":false,"orderClasses":false},"selection":{"mode":"multiple","selected":null,"target":"row","selectable":null}},"evals":[],"jsHooks":[]}</script>
 </div>
 </div>
-<div class="cell" data-hash="ROCKi_report_cache/html/unnamed-chunk-65_93c9e3815fd692fd5b2b0c492abc17c7">
+<div class="cell" data-hash="ROCKi_report_cache/html/unnamed-chunk-70_d225d661c9868057ef5489218fdb9998">
 <div class="cell-output-display">
-<p><img src="ROCKi_report_files/figure-html/unnamed-chunk-65-1.png" class="img-fluid" width="672"></p>
+<p><img src="ROCKi_report_files/figure-html/unnamed-chunk-70-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
-<div class="cell" data-hash="ROCKi_report_cache/html/unnamed-chunk-66_c3c00a1a38552262b38cd3b5006ce44d">
+<div class="cell" data-hash="ROCKi_report_cache/html/unnamed-chunk-71_66664d9f96be57c553f9eaec710621fc">
 <div class="cell-output-display">
-<p><img src="ROCKi_report_files/figure-html/unnamed-chunk-66-1.png" class="img-fluid" width="672"></p>
+<p><img src="ROCKi_report_files/figure-html/unnamed-chunk-71-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
 <p>WE HAVE SIGNIFICANT RESULTS!!!! The problem comes when comparing the sign of the enrichment score, If everything went perfect we would assume that downregulated genes would have been enriched in the downregulated genes of KO mice, and viceversa, but the opposite is happening.</p>
 <p>The direct comparison is with the genes found differentially expressed ROCKi independant.</p>
-<div class="cell" data-hash="ROCKi_report_cache/html/unnamed-chunk-67_b45d17fd8c11ee61fa59834d04993f00">
+<div class="cell" data-hash="ROCKi_report_cache/html/unnamed-chunk-72_d0ddab8d85c7e1f3ed64812fb3e98097">
 <div class="cell-output-display">
-<p><img src="ROCKi_report_files/figure-html/unnamed-chunk-67-1.png" class="img-fluid" width="672"></p>
+<p><img src="ROCKi_report_files/figure-html/unnamed-chunk-72-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
 <p>Stats correspond to pearson correlation.</p>
-<div class="cell" data-hash="ROCKi_report_cache/html/unnamed-chunk-68_f1a9e06eca588a4c4c8a61da635a211f">
+<div class="cell" data-hash="ROCKi_report_cache/html/unnamed-chunk-73_f863fe60812da7ca1f583f43233c3542">
 <div class="cell-output cell-output-stdout">
 <pre><code>R version 4.3.1 (2023-06-16)
 Platform: x86_64-pc-linux-gnu (64-bit)
@@ -689,127 +739,123 @@ attached base packages:
 
 other attached packages:
  [1] ggridges_0.5.4              ggraph_2.1.0               
- [3] igraph_1.5.0.1              rrvgo_1.12.0               
+ [3] igraph_1.5.1                rrvgo_1.12.2               
  [5] data.tree_1.0.0             IHW_1.28.0                 
  [7] ggpubr_0.6.0                broom_1.0.5                
  [9] impute_1.74.1               ReactomePA_1.44.0          
 [11] ggsignif_0.6.4              ggforce_0.4.1              
 [13] circlize_0.4.15             gage_2.50.0                
-[15] GSVA_1.48.2                 GO.db_3.17.0               
+[15] GSVA_1.48.3                 GO.db_3.17.0               
 [17] kableExtra_1.3.4            UpSetR_1.4.0               
-[19] enrichplot_1.20.0           pals_1.7                   
-[21] patchwork_1.1.2             DT_0.28                    
+[19] enrichplot_1.20.3           pals_1.8                   
+[21] patchwork_1.1.3             DT_0.29                    
 [23] fgsea_1.26.0                pathview_1.40.0            
-[25] clusterProfiler_4.8.2       org.Mm.eg.db_3.17.0        
+[25] clusterProfiler_4.8.3       org.Mm.eg.db_3.17.0        
 [27] AnnotationDbi_1.62.2        data.table_1.14.8          
 [29] viridis_0.6.4               viridisLite_0.4.2          
 [31] ComplexHeatmap_2.16.0       cowplot_1.1.1              
 [33] EnhancedVolcano_1.18.0      DESeq2_1.40.2              
 [35] SummarizedExperiment_1.30.2 Biobase_2.60.0             
-[37] MatrixGenerics_1.12.2       matrixStats_1.0.0          
-[39] GenomicRanges_1.52.0        GenomeInfoDb_1.36.1        
+[37] MatrixGenerics_1.12.3       matrixStats_1.0.0          
+[39] GenomicRanges_1.52.0        GenomeInfoDb_1.36.3        
 [41] IRanges_2.34.1              S4Vectors_0.38.1           
 [43] BiocGenerics_0.46.0         PCAtools_2.12.0            
 [45] ggrepel_0.9.3               lubridate_1.9.2            
 [47] forcats_1.0.0               stringr_1.5.0              
-[49] dplyr_1.1.2                 purrr_1.0.1                
+[49] dplyr_1.1.3                 purrr_1.0.2                
 [51] readr_2.1.4                 tidyr_1.3.0                
-[53] tibble_3.2.1                ggplot2_3.4.2              
-[55] tidyverse_2.0.0             BiocManager_1.30.21.1      
+[53] tibble_3.2.1                ggplot2_3.4.3              
+[55] tidyverse_2.0.0             BiocManager_1.30.22        
 
 loaded via a namespace (and not attached):
-  [1] dichromat_2.0-0.1           GSEABase_1.62.0            
-  [3] ggalt_0.4.0                 Biostrings_2.68.1          
-  [5] HDF5Array_1.28.1            vctrs_0.6.3                
-  [7] digest_0.6.33               png_0.1-8                  
-  [9] shape_1.4.6                 MASS_7.3-60                
- [11] reshape2_1.4.4              foreach_1.5.2              
- [13] httpuv_1.6.11               qvalue_2.32.0              
- [15] withr_2.5.0                 xfun_0.39                  
- [17] ggfun_0.1.1                 ellipsis_0.3.2             
- [19] memoise_2.0.1               gson_0.1.0                 
- [21] systemfonts_1.0.4           ragg_1.2.5                 
- [23] tidytree_0.4.4              GlobalOptions_0.1.2        
- [25] KEGGgraph_1.60.0            KEGGREST_1.40.0            
- [27] promises_1.2.0.1            httr_1.4.6                 
- [29] downloader_0.4              rstatix_0.7.2              
- [31] rhdf5filters_1.12.1         rhdf5_2.44.0               
- [33] rstudioapi_0.15.0           generics_0.1.3             
- [35] DOSE_3.26.1                 reactome.db_1.84.0         
- [37] curl_5.0.1                  zlibbioc_1.46.0            
- [39] ScaledMatrix_1.8.1          polyclip_1.10-4            
- [41] GenomeInfoDbData_1.2.10     xtable_1.8-4               
- [43] doParallel_1.0.17           evaluate_0.21              
- [45] S4Arrays_1.0.4              hms_1.1.3                  
- [47] irlba_2.3.5.1               colorspace_2.1-0           
- [49] NLP_0.2-1                   reticulate_1.30            
- [51] treemap_2.4-4               magrittr_2.0.3             
- [53] Rgraphviz_2.44.0            later_1.3.1                
- [55] ggtree_3.8.0                lattice_0.21-8             
- [57] mapproj_1.2.11              XML_3.99-0.14              
- [59] shadowtext_0.1.2            pillar_1.9.0               
- [61] nlme_3.1-162                iterators_1.0.14           
- [63] gridBase_0.4-7              compiler_4.3.1             
- [65] beachmat_2.16.0             RSpectra_0.16-1            
- [67] stringi_1.7.12              plyr_1.8.8                 
- [69] crayon_1.5.2                abind_1.4-5                
- [71] gridGraphics_0.5-1          emdbook_1.3.13             
- [73] locfit_1.5-9.8              graphlayouts_1.0.0         
- [75] org.Hs.eg.db_3.17.0         bit_4.0.5                  
- [77] fastmatch_1.1-3             textshaping_0.3.6          
- [79] codetools_0.2-19            BiocSingular_1.16.0        
- [81] openssl_2.1.0               crosstalk_1.2.0            
- [83] bslib_0.5.0                 slam_0.1-50                
- [85] GetoptLong_1.0.5            tm_0.7-11                  
- [87] mime_0.12                   splines_4.3.1              
- [89] Rcpp_1.0.11                 sparseMatrixStats_1.12.2   
- [91] HDO.db_0.99.1               Rttf2pt1_1.3.12            
- [93] knitr_1.43                  blob_1.2.4                 
- [95] utf8_1.2.3                  clue_0.3-64                
- [97] apeglm_1.22.1               DelayedMatrixStats_1.22.1  
- [99] openxlsx_4.2.5.2            ggplotify_0.1.1            
-[101] Matrix_1.6-0                tzdb_0.4.0                 
-[103] svglite_2.1.1               tweenr_2.0.2               
-[105] pkgconfig_2.0.3             pheatmap_1.0.12            
-[107] tools_4.3.1                 cachem_1.0.8               
-[109] RSQLite_2.3.1               rvest_1.0.3                
-[111] DBI_1.1.3                   numDeriv_2016.8-1.1        
-[113] graphite_1.46.0             fastmap_1.1.1              
-[115] rmarkdown_2.23              scales_1.2.1               
-[117] sass_0.4.7                  coda_0.19-4                
-[119] graph_1.78.0                carData_3.0-5              
-[121] farver_2.1.1                mgcv_1.9-0                 
-[123] tidygraph_1.2.3             scatterpie_0.2.1           
-[125] yaml_2.3.7                  cli_3.6.1                  
-[127] webshot_0.5.5               lifecycle_1.0.3            
-[129] askpass_1.1                 mvtnorm_1.2-2              
-[131] backports_1.4.1             BiocParallel_1.34.2        
-[133] annotate_1.78.0             timechange_0.2.0           
-[135] gtable_0.3.3                rjson_0.2.21               
-[137] umap_0.2.10.0               parallel_4.3.1             
-[139] ape_5.7-1                   jsonlite_1.8.7             
-[141] bitops_1.0-7                bit64_4.0.5                
-[143] yulab.utils_0.0.6           zip_2.3.0                  
-[145] bdsmatrix_1.3-6             jquerylib_0.1.4            
-[147] GOSemSim_2.26.1             dqrng_0.3.0                
-[149] lazyeval_0.2.2              shiny_1.7.4.1              
-[151] htmltools_0.5.5             proj4_1.0-12               
-[153] rappdirs_0.3.3              glue_1.6.2                 
-[155] XVector_0.40.0              RCurl_1.98-1.12            
-[157] treeio_1.24.2               gridExtra_2.3              
-[159] extrafontdb_1.0             R6_2.5.1                   
-[161] SingleCellExperiment_1.22.0 fdrtool_1.2.17             
-[163] labeling_0.4.2              cluster_2.1.4              
-[165] bbmle_1.0.25                Rhdf5lib_1.22.0            
-[167] wordcloud_2.6               aplot_0.1.10               
-[169] DelayedArray_0.26.6         tidyselect_1.2.0           
-[171] maps_3.4.1                  xml2_1.3.5                 
-[173] ash_1.0-15                  car_3.1-2                  
-[175] rsvd_1.0.5                  munsell_0.5.0              
-[177] KernSmooth_2.23-22          htmlwidgets_1.6.2          
-[179] RColorBrewer_1.1-3          rlang_1.1.1                
-[181] extrafont_0.19              lpsymphony_1.28.1          
-[183] fansi_1.0.4                </code></pre>
+  [1] bitops_1.0-7                HDO.db_0.99.1              
+  [3] httr_1.4.7                  webshot_0.5.5              
+  [5] RColorBrewer_1.1-3          doParallel_1.0.17          
+  [7] numDeriv_2016.8-1.1         Rgraphviz_2.44.0           
+  [9] tools_4.3.1                 backports_1.4.1            
+ [11] utf8_1.2.3                  R6_2.5.1                   
+ [13] HDF5Array_1.28.1            mgcv_1.9-0                 
+ [15] lazyeval_0.2.2              apeglm_1.22.1              
+ [17] rhdf5filters_1.12.1         GetoptLong_1.0.5           
+ [19] withr_2.5.0                 graphite_1.46.0            
+ [21] gridExtra_2.3               fdrtool_1.2.17             
+ [23] textshaping_0.3.6           cli_3.6.1                  
+ [25] scatterpie_0.2.1            sass_0.4.7                 
+ [27] labeling_0.4.3              slam_0.1-50                
+ [29] KEGGgraph_1.60.0            mvtnorm_1.2-3              
+ [31] tm_0.7-11                   askpass_1.2.0              
+ [33] systemfonts_1.0.4           yulab.utils_0.0.9          
+ [35] gson_0.1.0                  DOSE_3.26.1                
+ [37] svglite_2.1.1               dichromat_2.0-0.1          
+ [39] bbmle_1.0.25                maps_3.4.1                 
+ [41] rstudioapi_0.15.0           RSQLite_2.3.1              
+ [43] treemap_2.4-4               generics_0.1.3             
+ [45] gridGraphics_0.5-1          shape_1.4.6                
+ [47] crosstalk_1.2.0             zip_2.3.0                  
+ [49] car_3.1-2                   Matrix_1.6-0               
+ [51] fansi_1.0.4                 abind_1.4-5                
+ [53] lifecycle_1.0.3             yaml_2.3.7                 
+ [55] carData_3.0-5               rhdf5_2.44.0               
+ [57] qvalue_2.32.0               blob_1.2.4                 
+ [59] promises_1.2.1              dqrng_0.3.1                
+ [61] bdsmatrix_1.3-6             crayon_1.5.2               
+ [63] lattice_0.21-8              beachmat_2.16.0            
+ [65] annotate_1.78.0             KEGGREST_1.40.0            
+ [67] mapproj_1.2.11              pillar_1.9.0               
+ [69] knitr_1.44                  rjson_0.2.21               
+ [71] codetools_0.2-19            fastmatch_1.1-4            
+ [73] glue_1.6.2                  downloader_0.4             
+ [75] ggfun_0.1.3                 vctrs_0.6.3                
+ [77] png_0.1-8                   treeio_1.24.3              
+ [79] gtable_0.3.4                emdbook_1.3.13             
+ [81] cachem_1.0.8                openxlsx_4.2.5.2           
+ [83] xfun_0.40                   mime_0.12                  
+ [85] S4Arrays_1.0.6              tidygraph_1.2.3            
+ [87] coda_0.19-4                 pheatmap_1.0.12            
+ [89] SingleCellExperiment_1.22.0 iterators_1.0.14           
+ [91] ellipsis_0.3.2              nlme_3.1-162               
+ [93] ggtree_3.8.2                bit64_4.0.5                
+ [95] bslib_0.5.1                 irlba_2.3.5.1              
+ [97] colorspace_2.1-0            DBI_1.1.3                  
+ [99] tidyselect_1.2.0            bit_4.0.5                  
+[101] compiler_4.3.1              rvest_1.0.3                
+[103] graph_1.78.0                NLP_0.2-1                  
+[105] xml2_1.3.5                  DelayedArray_0.26.7        
+[107] shadowtext_0.1.2            scales_1.2.1               
+[109] rappdirs_0.3.3              digest_0.6.33              
+[111] rmarkdown_2.25              XVector_0.40.0             
+[113] htmltools_0.5.6             pkgconfig_2.0.3            
+[115] umap_0.2.10.0               sparseMatrixStats_1.12.2   
+[117] lpsymphony_1.28.1           fastmap_1.1.1              
+[119] rlang_1.1.1                 GlobalOptions_0.1.2        
+[121] htmlwidgets_1.6.2           shiny_1.7.5                
+[123] DelayedMatrixStats_1.22.6   jquerylib_0.1.4            
+[125] farver_2.1.1                jsonlite_1.8.7             
+[127] BiocParallel_1.34.2         GOSemSim_2.26.1            
+[129] BiocSingular_1.16.0         RCurl_1.98-1.12            
+[131] magrittr_2.0.3              GenomeInfoDbData_1.2.10    
+[133] ggplotify_0.1.2             wordcloud_2.6              
+[135] Rhdf5lib_1.22.1             munsell_0.5.0              
+[137] Rcpp_1.0.11                 reticulate_1.32.0          
+[139] ape_5.7-1                   stringi_1.7.12             
+[141] zlibbioc_1.46.0             MASS_7.3-60                
+[143] plyr_1.8.8                  org.Hs.eg.db_3.17.0        
+[145] parallel_4.3.1              Biostrings_2.68.1          
+[147] graphlayouts_1.0.0          splines_4.3.1              
+[149] hms_1.1.3                   locfit_1.5-9.8             
+[151] reshape2_1.4.4              ScaledMatrix_1.8.1         
+[153] XML_3.99-0.14               evaluate_0.21              
+[155] httpuv_1.6.11               tzdb_0.4.0                 
+[157] foreach_1.5.2               tweenr_2.0.2               
+[159] openssl_2.1.0               polyclip_1.10-4            
+[161] clue_0.3-64                 gridBase_0.4-7             
+[163] rsvd_1.0.5                  xtable_1.8-4               
+[165] reactome.db_1.84.0          RSpectra_0.16-1            
+[167] tidytree_0.4.5              later_1.3.1                
+[169] rstatix_0.7.2               ragg_1.2.5                 
+[171] aplot_0.2.1                 memoise_2.0.1              
+[173] cluster_2.1.4               timechange_0.2.0           
+[175] GSEABase_1.62.0            </code></pre>
 </div>
 </div>
 </section>
