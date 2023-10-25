@@ -819,7 +819,7 @@ Important
 <section id="last-part" class="level2" data-number="13">
 <h2 data-number="13" class="anchored" data-anchor-id="last-part"><span class="header-section-number">13</span> Last Part?!</h2>
 <p>I looked then into three specific set of groups, the ROCK interactors from STRING db plus the genes in two of the KEGG pathways of interest.</p>
-<div class="cell" data-hash="ROCKi_report_cache/html/unnamed-chunk-85_5f2b11846aa169a37117d3376597c5f4">
+<div class="cell" data-hash="ROCKi_report_cache/html/unnamed-chunk-85_9491ea8bf954676728d375fafc53c02e">
 <div class="cell-output-display">
 <p><img src="ROCKi_report_files/figure-html/unnamed-chunk-85-1.png" class="img-fluid" width="480"></p>
 </div>
@@ -843,20 +843,49 @@ Important
 <p>In here I’m plotting the log2FC of the two comparisons for each protein in the pathway. The box is divided into two the left side is KO vs WT (Veh) and the rigth side is KO (ROCKi) vs KO (Veh).<strong>HERE IS IMPORTANT TO MENTION THAT THE BASE OF THE COMPARISON ON THE LEFT CHANGE SO THE CONTRAST CAN BE CLEAR</strong>, differing to the scatter plot where a positive linear correlation was expected for rescue.</p>
 <p><img src="mmu04310._twologFC.multi.png" class="img-fluid"></p>
 <p><img src="mmu04810._twologFC.multi.png" class="img-fluid"> I’m plotting next the, now, classical scatter plot but leaving the overreaction genes as “others”.</p>
-<div class="cell" data-hash="ROCKi_report_cache/html/unnamed-chunk-89_c53eabac2bbfacfd7e2267de366f31f0">
+<div class="cell" data-hash="ROCKi_report_cache/html/unnamed-chunk-89_ba1ee7c2f28072f711068a96c1d35696">
 <div class="cell-output-display">
 <p><img src="ROCKi_report_files/figure-html/unnamed-chunk-89-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
 <p>Next I looked into the proportions of genes that needed to be rescued (abs(log2Fch)&gt;0.25 and how they were grouped based on KO changes or KO rescue, for all genes and for the groups of genes selected previously.</p>
-<div class="cell" data-hash="ROCKi_report_cache/html/unnamed-chunk-90_ff8c1dd4d80ed7dcd590d18ca03239da">
+<div class="cell" data-hash="ROCKi_report_cache/html/unnamed-chunk-90_4f871a04ab28ed7367b72f8e238457e4">
 <div class="cell-output-display">
 <p><img src="ROCKi_report_files/figure-html/unnamed-chunk-90-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
 <p><strong>Stats not calculated yet, but look significant</strong></p>
 <p>It looks like there is more rescue needed in either of the gene lists, as seen and identified previously. Then in terms of rescue, ROCK interactors are enriched in KO rescue genes, similiar as Wnt pathway. Lastly and more interestingly is that in the regulation of cytoskeleton it looks like an enrichment of genes with patterns of KO change, which will imply MIC KO of Daam1 is also acting in this pathway independently of ROCK.</p>
-<div class="cell" data-hash="ROCKi_report_cache/html/unnamed-chunk-91_66bee390edb42b32b9052ec1e9a7abfa">
+<div class="cell" data-hash="ROCKi_report_cache/html/unnamed-chunk-91_56e6de8e5babb33d239bb565aa1c14ef">
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "ROCKs interactors:"</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 1 × 3
+  `Rescue Needed` `KO Changes` `KO rescue`
+            &lt;dbl&gt;        &lt;dbl&gt;       &lt;dbl&gt;
+1          0.0155        0.837    0.000497</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "Wnt signaling pathway:"</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 1 × 3
+  `Rescue Needed` `KO Changes` `KO rescue`
+            &lt;dbl&gt;        &lt;dbl&gt;       &lt;dbl&gt;
+1           0.140        0.778      0.0643</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "Regulation of actin cytoskeleton:"</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 1 × 3
+  `Rescue Needed` `KO Changes` `KO rescue`
+            &lt;dbl&gt;        &lt;dbl&gt;       &lt;dbl&gt;
+1           0.213        0.118      0.0113</code></pre>
+</div>
+</div>
+<div class="cell" data-hash="ROCKi_report_cache/html/unnamed-chunk-92_cabb19442c8a7f1ee6c1d50a4a66839e">
 <div class="cell-output cell-output-stdout">
 <pre><code>R version 4.3.1 (2023-06-16)
 Platform: x86_64-pc-linux-gnu (64-bit)
@@ -922,8 +951,8 @@ loaded via a namespace (and not attached):
  [15] rhdf5filters_1.12.1         GetoptLong_1.0.5           
  [17] withr_2.5.1                 graphite_1.46.0            
  [19] gridExtra_2.3               fdrtool_1.2.17             
- [21] cli_3.6.1                   scatterpie_0.2.1           
- [23] sass_0.4.7                  labeling_0.4.3             
+ [21] textshaping_0.3.6           cli_3.6.1                  
+ [23] scatterpie_0.2.1            labeling_0.4.3             
  [25] slam_0.1-50                 KEGGgraph_1.60.0           
  [27] tm_0.7-11                   askpass_1.2.0              
  [29] systemfonts_1.0.4           yulab.utils_0.0.9          
@@ -932,69 +961,68 @@ loaded via a namespace (and not attached):
  [35] maps_3.4.1                  rstudioapi_0.15.0          
  [37] RSQLite_2.3.1               treemap_2.4-4              
  [39] generics_0.1.3              gridGraphics_0.5-1         
- [41] shape_1.4.6                 crosstalk_1.2.0            
- [43] car_3.1-2                   Matrix_1.6-0               
- [45] fansi_1.0.5                 abind_1.4-5                
- [47] lifecycle_1.0.3             yaml_2.3.7                 
- [49] carData_3.0-5               rhdf5_2.44.0               
- [51] qvalue_2.32.0               blob_1.2.4                 
- [53] promises_1.2.1              dqrng_0.3.1                
- [55] crayon_1.5.2                lattice_0.21-8             
- [57] beachmat_2.16.0             annotate_1.78.0            
- [59] KEGGREST_1.40.0             mapproj_1.2.11             
- [61] pillar_1.9.0                knitr_1.44                 
- [63] rjson_0.2.21                codetools_0.2-19           
- [65] fastmatch_1.1-4             glue_1.6.2                 
- [67] downloader_0.4              ggfun_0.1.3                
- [69] vctrs_0.6.4                 png_0.1-8                  
- [71] treeio_1.24.3               gtable_0.3.4               
- [73] cachem_1.0.8                xfun_0.40                  
- [75] mime_0.12                   S4Arrays_1.0.6             
- [77] tidygraph_1.2.3             pheatmap_1.0.12            
- [79] SingleCellExperiment_1.22.0 iterators_1.0.14           
- [81] ellipsis_0.3.2              nlme_3.1-162               
- [83] ggtree_3.8.2                bit64_4.0.5                
- [85] bslib_0.5.1                 irlba_2.3.5.1              
- [87] colorspace_2.1-0            DBI_1.1.3                  
- [89] tidyselect_1.2.0            bit_4.0.5                  
- [91] compiler_4.3.1              rvest_1.0.3                
- [93] graph_1.78.0                see_0.8.0                  
- [95] NLP_0.2-1                   xml2_1.3.5                 
- [97] DelayedArray_0.26.7         shadowtext_0.1.2           
- [99] scales_1.2.1                rappdirs_0.3.3             
-[101] digest_0.6.33               rmarkdown_2.25             
-[103] XVector_0.40.0              htmltools_0.5.6.1          
-[105] pkgconfig_2.0.3             umap_0.2.10.0              
-[107] sparseMatrixStats_1.12.2    lpsymphony_1.28.1          
-[109] fastmap_1.1.1               rlang_1.1.1                
-[111] GlobalOptions_0.1.2         htmlwidgets_1.6.2          
-[113] shiny_1.7.5.1               DelayedMatrixStats_1.22.6  
-[115] jquerylib_0.1.4             farver_2.1.1               
-[117] jsonlite_1.8.7              BiocParallel_1.34.2        
-[119] GOSemSim_2.26.1             BiocSingular_1.16.0        
-[121] RCurl_1.98-1.12             magrittr_2.0.3             
-[123] GenomeInfoDbData_1.2.10     ggplotify_0.1.2            
-[125] wordcloud_2.6               Rhdf5lib_1.22.1            
-[127] munsell_0.5.0               Rcpp_1.0.11                
-[129] reticulate_1.32.0           ape_5.7-1                  
-[131] stringi_1.7.12              zlibbioc_1.46.0            
-[133] MASS_7.3-60                 plyr_1.8.9                 
-[135] org.Hs.eg.db_3.17.0         parallel_4.3.1             
-[137] Biostrings_2.68.1           graphlayouts_1.0.0         
-[139] splines_4.3.1               hms_1.1.3                  
-[141] locfit_1.5-9.8              reshape2_1.4.4             
-[143] ScaledMatrix_1.8.1          XML_3.99-0.14              
-[145] evaluate_0.22               httpuv_1.6.11              
-[147] tzdb_0.4.0                  foreach_1.5.2              
-[149] tweenr_2.0.2                openssl_2.1.0              
-[151] polyclip_1.10-4             clue_0.3-64                
-[153] gridBase_0.4-7              rsvd_1.0.5                 
-[155] xtable_1.8-4                reactome.db_1.84.0         
-[157] RSpectra_0.16-1             tidytree_0.4.5             
-[159] later_1.3.1                 rstatix_0.7.2              
-[161] aplot_0.2.1                 memoise_2.0.1              
-[163] cluster_2.1.4               timechange_0.2.0           
-[165] GSEABase_1.62.0            </code></pre>
+ [41] shape_1.4.6                 car_3.1-2                  
+ [43] Matrix_1.6-0                fansi_1.0.5                
+ [45] abind_1.4-5                 lifecycle_1.0.3            
+ [47] yaml_2.3.7                  carData_3.0-5              
+ [49] rhdf5_2.44.0                qvalue_2.32.0              
+ [51] blob_1.2.4                  promises_1.2.1             
+ [53] dqrng_0.3.1                 crayon_1.5.2               
+ [55] lattice_0.21-8              beachmat_2.16.0            
+ [57] annotate_1.78.0             KEGGREST_1.40.0            
+ [59] mapproj_1.2.11              pillar_1.9.0               
+ [61] knitr_1.44                  rjson_0.2.21               
+ [63] codetools_0.2-19            fastmatch_1.1-4            
+ [65] glue_1.6.2                  downloader_0.4             
+ [67] ggfun_0.1.3                 vctrs_0.6.4                
+ [69] png_0.1-8                   treeio_1.24.3              
+ [71] gtable_0.3.4                cachem_1.0.8               
+ [73] xfun_0.40                   mime_0.12                  
+ [75] S4Arrays_1.0.6              tidygraph_1.2.3            
+ [77] pheatmap_1.0.12             SingleCellExperiment_1.22.0
+ [79] iterators_1.0.14            ellipsis_0.3.2             
+ [81] nlme_3.1-162                ggtree_3.8.2               
+ [83] bit64_4.0.5                 irlba_2.3.5.1              
+ [85] colorspace_2.1-0            DBI_1.1.3                  
+ [87] tidyselect_1.2.0            bit_4.0.5                  
+ [89] compiler_4.3.1              rvest_1.0.3                
+ [91] graph_1.78.0                see_0.8.0                  
+ [93] NLP_0.2-1                   xml2_1.3.5                 
+ [95] DelayedArray_0.26.7         shadowtext_0.1.2           
+ [97] scales_1.2.1                rappdirs_0.3.3             
+ [99] digest_0.6.33               rmarkdown_2.25             
+[101] XVector_0.40.0              htmltools_0.5.6.1          
+[103] pkgconfig_2.0.3             umap_0.2.10.0              
+[105] sparseMatrixStats_1.12.2    lpsymphony_1.28.1          
+[107] fastmap_1.1.1               rlang_1.1.1                
+[109] GlobalOptions_0.1.2         htmlwidgets_1.6.2          
+[111] shiny_1.7.5.1               DelayedMatrixStats_1.22.6  
+[113] farver_2.1.1                jsonlite_1.8.7             
+[115] BiocParallel_1.34.2         GOSemSim_2.26.1            
+[117] BiocSingular_1.16.0         RCurl_1.98-1.12            
+[119] magrittr_2.0.3              GenomeInfoDbData_1.2.10    
+[121] ggplotify_0.1.2             wordcloud_2.6              
+[123] Rhdf5lib_1.22.1             munsell_0.5.0              
+[125] Rcpp_1.0.11                 reticulate_1.32.0          
+[127] ape_5.7-1                   stringi_1.7.12             
+[129] zlibbioc_1.46.0             MASS_7.3-60                
+[131] plyr_1.8.9                  org.Hs.eg.db_3.17.0        
+[133] parallel_4.3.1              Biostrings_2.68.1          
+[135] graphlayouts_1.0.0          splines_4.3.1              
+[137] hms_1.1.3                   locfit_1.5-9.8             
+[139] reshape2_1.4.4              ScaledMatrix_1.8.1         
+[141] XML_3.99-0.14               evaluate_0.22              
+[143] httpuv_1.6.11               tzdb_0.4.0                 
+[145] foreach_1.5.2               tweenr_2.0.2               
+[147] openssl_2.1.0               polyclip_1.10-4            
+[149] clue_0.3-64                 gridBase_0.4-7             
+[151] rsvd_1.0.5                  xtable_1.8-4               
+[153] reactome.db_1.84.0          RSpectra_0.16-1            
+[155] tidytree_0.4.5              later_1.3.1                
+[157] rstatix_0.7.2               ragg_1.2.5                 
+[159] aplot_0.2.1                 memoise_2.0.1              
+[161] cluster_2.1.4               timechange_0.2.0           
+[163] GSEABase_1.62.0            </code></pre>
 </div>
 </div>
 </section>
